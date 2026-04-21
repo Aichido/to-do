@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getDatabase, onValue, push, ref, remove, set } from "firebase/database";
 import { database } from '../dbConfig.js'
 import { MdDelete } from 'react-icons/md';
+import './App.css';
 
 
 function App() {
@@ -42,7 +43,8 @@ onValue(ref(db, 'toDoList'), (snapshot) => {
         <h1>Welcome to To-Do App</h1>
         <div>
           <label>Item Name</label>
-          <input value={itemName} onChange={(e)=> setItemName(e.target.value)} type="text" name="itemName" id="itemName" />
+          <input 
+         className='zone' value={itemName} onChange={(e)=> setItemName(e.target.value)} type="text" name="itemName" id="itemName" />
           <button onClick={handelsubmit}>submit</button>
         </div>
         <div>
