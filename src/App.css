@@ -1,4 +1,46 @@
+.maListe{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.maListe *{
+    font: 20px Arial;
+    margin: 5px;
+}
+button{
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+label{
+    font-weight: bolder;
+}
 .zone{
-    width: 200px;
-    height: 30px;
+    width: 300px;
+    height: 50px;
+    padding-left: .5%;
+    border-radius: 10px;
+}
+li{
+    font-size: 27px;
+    transition: font-style 1s;
+}
+li:hover{
+    font-style: italic;
+}
+.ajouter{
+    width: 100px;
+    height: 50px;
+    background-color: #4CAF50;    
+}
+.supprimer{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f44336;    
 }

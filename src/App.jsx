@@ -40,20 +40,20 @@ onValue(ref(db, 'toDoList'), (snapshot) => {
   return (
     <>
       <form>
-        <h1>Welcome to To-Do App</h1>
-        <div>
-          <label>Item Name</label>
+        <h1>WBienvenue sur la liste des courses à faire</h1>
+        <div className='maListe'>
+          <label>Nom:</label>
           <input 
          className='zone' value={itemName} onChange={(e)=> setItemName(e.target.value)} type="text" name="itemName" id="itemName" />
-          <button onClick={handelsubmit}>submit</button>
+          <button className='ajouter' onClick={handelsubmit}>Ajouter</button>
         </div>
         <div>
-          <h2>Item Name:</h2>
+          <h2>Listes des courses à faire:</h2>
           {itemList.map((item) => (
             <ul key={item.id}>
-              <li>{item.itemName}</li>
-              <button onClick={() => handeldelete(item)}><MdDelete /></button>
-            </ul>
+              <li>{item.itemName}<button className='supprimer' onClick={() => handeldelete(item)}><MdDelete /></button>
+              </li>
+            </ul> 
           ))}
         </div>
         
